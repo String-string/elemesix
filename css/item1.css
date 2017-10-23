@@ -191,12 +191,12 @@ a {
 
 #outerWrap {
   width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /*overflow-y: scroll;
+  overflow-x: hidden;*/
   position: relative;
   height: 3.75214rem; }
   #outerWrap .tabGroup {
-    height: 3.75214rem;
+    height: 3.2906rem;
     width: 0.68376rem;
     overflow-y: scroll; }
     #outerWrap .tabGroup li {
