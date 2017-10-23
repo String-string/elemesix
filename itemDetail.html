@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/Creset.css">
+    <link rel="stylesheet" href="css/itemDeatail.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="headerBanner">
+    <div class="icon-back">
+        <img src="images/p6/iconback.png" alt="">
+    </div>
+</div>
+<div class="item">
+    <div class="itemDiv">
+        <div class="titleDiv">
+            皮蛋瘦肉粥
+        </div>
+        <div class="sellNumDiv">
+            月售 <span class="number">1132份</span> ，好评率 <span class="pingRate">100%</span>
+        </div>
+        <div class="priceDiV toTr">
+            <div class="nowPrice toTd middle"><small>￥</small>24</div>
+            <div class="oldPrice toTd middle"><small>￥</small>28</div>
+            <div class="button toTd middle right">
+                <div class="addCarButton">加入购物车</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="itemIntroduce">
+    <div class="introduceTitle">商品介绍</div>
+    <div class="introduceDetail">一碗皮蛋瘦肉粥，总是我到粥店时的不二之选。香浓软滑，饱腹暖心，皮蛋的Q弹与瘦肉的嫩滑伴着粥香溢于满口，让人喝一碗这样的粥也觉得心满意足</div>
+</div>
+<div class="assessDiv">
+    <div class="assessTop">
+        <div class="assessTitle ">商品评价</div>
+        <div class="assessTab toTr">
+            <div class="all toTd selectSpanTab allAssess">
+                <div class="allSpan ">
+                    全部57
+                </div>
+            </div>
+            <div class="all toTd toCaoSpan">
+                <div class="allSpan">
+                    推荐47
+                </div>
+            </div>
+            <div class="all tuCao toTd recommendSpan">
+                <div class="allSpan">
+                    吐槽10
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="onlyLookAssessDiv">
+        <div class="onlyLookAssess toTr">
+            <div class="icon-check_circle toTd middle" onclick="onlyCheckChange()"></div>
+            <div class="onlyLookSpan toTd middle">只看有内容的评价</div>
+        </div>
+    </div>
+    <div class="assessDetailsDiv">
+        <div class="timeAndUser toTr">
+            <div class="timeTd toTd middle left">
+                2016-07-07  12:34
+            </div>
+            <div class="userIdTd toTd right">3*******2</div>
+            <div class="userImgTd toTd middle right">
+                <img src="images/p4/usertouxiang.png" alt="">
+            </div>
+        </div>
+        <div class="thumbTr toTr">
+            <div class="icon-thumb_down toTd middle"></div>
+            <div class="assessContent toTd middle left">太少了，不够一个人吃！！</div>
+        </div>
+    </div>
+    <div class="assessDetailsDiv">
+        <div class="timeAndUser toTr">
+            <div class="timeTd toTd middle left">
+                2016-07-07  12:34
+            </div>
+            <div class="userIdTd toTd right">3*******2</div>
+            <div class="userImgTd toTd middle right">
+                <img src="images/p4/usertouxiang.png" alt="">
+            </div>
+        </div>
+        <div class="thumbTr toTr">
+            <div class="icon-thumb_up toTd middle" style="color: #00a0dc"></div>
+            <div class="assessContent toTd middle left">味道不错，就是有点儿咸，有待进一步优化</div>
+        </div>
+    </div>
+    <div class="assessDetailsDiv">
+        <div class="timeAndUser toTr">
+            <div class="timeTd toTd middle left">
+                2016-07-07  12:34
+            </div>
+            <div class="userIdTd toTd right">3*******2</div>
+            <div class="userImgTd toTd middle right">
+                <img src="images/p4/usertouxiang.png" alt="">
+            </div>
+        </div>
+        <div class="thumbTr toTr">
+            <div class="icon-thumb_up toTd middle" style="color: #00a0dc"></div>
+            <div class="assessContent toTd middle left">Good</div>
+        </div>
+    </div>
+</div>
+<div class="footerDiv">
+    <div class="footerBgTr toTr">
+        <div class="shopCarBgDivTd toTd">
+            <div class="shipCarContain" onclick="shopCartShow()">
+                <div class="icon-shopping_cart"></div>
+            </div>
+        </div>
+        <div class="totalPriceTd toTd">￥0</div>
+        <div class="sendFeeTd toTd">另需配送费￥4元</div>
+        <div class="sendInitPriceTd toTd">
+            <div class="sendInitPrice">￥20元起送</div>
+        </div>
+    </div>
+</div>
+<!--购物车详情页-->
+<div class="shopCartShadow" style="display: none">
+    <div class="shopCartDetails">
+        <div class="carTr toTr">
+            <div class="carTd toTd middle left">购物车</div>
+            <div class="deleteTd toTd middle right">清除</div>
+        </div>
+        <div class="carItemTr toTr">
+            <div class="carTd toTd middle left">莲子核桃黑米粥</div>
+            <div class="carPriceTd toTd middle right">￥10</div>
+            <div class="buttonTd toTd middle right">
+                <span class="icon-remove_circle_outline"></span>
+                <span class="number toTd">1</span>
+                <span class="icon-add_circle"></span>
+            </div>
+
+        </div>
+        <div class="carItemTr toTr">
+            <div class="carTd toTd middle left">莲子核桃黑米粥</div>
+            <div class="carPriceTd toTd middle right">￥10</div>
+            <div class="buttonTd toTd middle right">
+                <span class="icon-remove_circle_outline"></span>
+                <span class="number toTd">1</span>
+                <span class="icon-add_circle"></span>
+            </div>
+
+        </div>
+        <div class="carItemTr toTr">
+            <div class="carTd toTd middle left">莲子核桃黑米粥</div>
+            <div class="carPriceTd toTd middle right">￥10</div>
+            <div class="buttonTd toTd middle right">
+                <span class="icon-remove_circle_outline"></span>
+                <span class="number toTd">1</span>
+                <span class="icon-add_circle"></span>
+            </div>
+
+        </div>
+        <div class="carItemTr toTr">
+            <div class="carTd toTd middle left">莲子核桃黑米粥</div>
+            <div class="carPriceTd toTd middle right">￥10</div>
+            <div class="buttonTd toTd middle right">
+                <span class="icon-remove_circle_outline"></span>
+                <span class="number toTd">1</span>
+                <span class="icon-add_circle"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="footerDiv">
+        <div class="footerBgTr toTr">
+            <div class="shopCarBgDivTd toTd">
+                <div class="shipCarContain" style="background-color: #00a0dc" onclick="shopCartHide()">
+                    <div class="icon-shopping_cart" style="color: #ffffff"></div>
+                </div>
+            </div>
+            <div class="totalPriceTd toTd">￥<span class="total">0</span></div>
+            <div class="sendFeeTd toTd">另需配送费￥4元</div>
+            <div class="sendInitPriceTd toTd">
+                <div class="sendInitPrice">还差￥20元起送</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/event.js"></script>
+<script src="js/tween.js"></script>
+<script>
+    //    购物车显示和关闭fun
+    function shopCartShow() {
+        $(".shopCartShadow").show();
+    }
+    function shopCartHide() {
+        $(".shopCartShadow").hide();
+    }
+    //关闭商品详情页面
+    $(".icon-back").click(function () {
+        window.location.href = "item1.html";
+    })
+
+
+    //    评价页面评价显示和隐藏
+
+    //    全部
+    $(".allAssess").click(function () {
+        $(".icon-thumb_down").parent(".thumbTr").show();
+        $(".icon-thumb_down").parent(".thumbTr").prev(".assessContent").show();
+        $(".icon-thumb_up").parent(".thumbTr").show();
+        $(".icon-thumb_up").parent(".thumbTr").prev(".assessContent").show();
+
+    })
+
+    //    推荐
+    $(".toCaoSpan").click(function () {
+        $(".icon-thumb_down").parent(".thumbTr").hide();
+        $(".icon-thumb_down").parent(".thumbTr").prev(".assessContent").hide();
+        $(".icon-thumb_up").parent(".thumbTr").show();
+        $(".icon-thumb_up").parent(".thumbTr").prev(".assessContent").show();
+
+    })
+
+
+    //    吐槽
+    $(".recommendSpan").click(function () {
+        $(".icon-thumb_down").parent(".thumbTr").show();
+        $(".icon-thumb_down").parent(".thumbTr").prev(".assessContent").show();
+        $(".icon-thumb_up").parent(".thumbTr").hide();
+        $(".icon-thumb_up").parent(".thumbTr").prev(".assessContent").hide();
+    })
+
+    var oAllList = DOM.getElesByClass("all");
+    function changeAllTab() {
+        var index = DOM.getIndex(this);
+        for (var i = 0; i < oAllList.length; i++) {
+            DOM.removeClass(oAllList[i], "selectSpanTab");
+        }
+        DOM.addClass(this, "selectSpanTab");
+    }
+
+    for (var i = 0; i < oAllList.length; i++) {
+        oAllList[i].onclick = changeAllTab;
+    }
+
+    //只看评价内容
+
+    function onlyCheckChange() {
+        var onlycheck= $(".icon-check_circle");
+        var thumb=$(".thumbTr");
+        if(onlycheck.hasClass("onlyCheck")){
+            onlycheck.removeClass("onlyCheck");//变灰
+            alert("全部内容");
+            $(".assessDetailsDiv").append('<div class="thumbTr toTr">\n' +
+                '                <div class="icon-thumb_up toTd middle"></div>\n' +
+                '                <div class="thumbContent toTd middle">\n' +
+                '                <span class="content">\n' +
+                '                    大王香菇卤...\n' +
+                '                </span>\n' +
+                '                    <span class="content">\n' +
+                '                    大王香菇卤...\n' +
+                '                </span>\n' +
+                '                    <span class="content">\n' +
+                '                    大王香菇卤...\n' +
+                '                </span>\n' +
+                '                </div>\n' +
+                '            </div>');
+        }else{
+            onlycheck.addClass("onlyCheck");//变蓝色
+            alert("只看评价内容");
+            $(".assessDetailsDiv.thumbTr").remove();
+            thumb.hide();
+        }
+    }
+</script>
+</body>
+</html>

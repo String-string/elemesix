@@ -1,0 +1,253 @@
+body {
+  position: relative;
+  background-color: #F3F5F7; }
+
+.headerBanner {
+  width: 100%;
+  height: 3.20513rem;
+  background-image: url("../images/p4/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0; }
+  .headerBanner .icon-back {
+    width: 0.05556rem;
+    height: 0.10256rem;
+    position: absolute;
+    top: 0.08547rem;
+    left: 0.08547rem; }
+    .headerBanner .icon-back img {
+      width: 0.11111rem;
+      height: 0.17094rem; }
+
+.item {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 0.15385rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(7, 17, 27, 0.1); }
+  .item .itemDiv {
+    position: relative; }
+    .item .itemDiv .titleDiv {
+      font-size: 0.11966rem;
+      font-weight: 2.99145rem;
+      line-height: 0.11966rem;
+      color: #07111b;
+      font-family: "Microsoft Yahei"; }
+    .item .itemDiv .sellNumDiv {
+      padding-top: 0.06838rem;
+      font-size: 0.08547rem;
+      color: #93999f;
+      line-height: 0.08547rem; }
+    .item .itemDiv .priceDiV {
+      margin-top: 0.15385rem; }
+      .item .itemDiv .priceDiV .nowPrice {
+        font-size: 0.11966rem;
+        color: #f01414;
+        line-height: 0.20513rem;
+        font-weight: 2.99145rem; }
+      .item .itemDiv .priceDiV .oldPrice {
+        padding-left: 0.06838rem;
+        margin-top: 0.06838rem;
+        font-size: 0.08547rem;
+        color: #93999f;
+        line-height: 0.20513rem;
+        text-decoration: line-through;
+        font-weight: 2.99145rem; }
+      .item .itemDiv .priceDiV .button {
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+        .item .itemDiv .priceDiV .button .addCarButton {
+          width: 0.63248rem;
+          height: 0.20513rem;
+          border-radius: 0.10256rem;
+          background-color: #00a0dc;
+          color: #ffffff;
+          text-align: center;
+          line-height: 0.20513rem; }
+
+.itemIntroduce {
+  background-color: #ffffff;
+  margin-top: 0.13675rem;
+  width: 100%;
+  padding: 0.15385rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(7, 17, 27, 0.1); }
+  .itemIntroduce .introduceTitle {
+    font-size: 0.11966rem;
+    font-weight: 2.99145rem;
+    line-height: 0.11966rem;
+    color: #07111b;
+    font-family: "Microsoft Yahei"; }
+  .itemIntroduce .introduceDetail {
+    padding-top: 0.05128rem;
+    padding-left: 0.06838rem;
+    width: 2.76068rem;
+    font-size: 0.10256rem;
+    font-weight: 0.8547rem;
+    color: #4d555d;
+    line-height: 0.20513rem; }
+
+.assessDiv {
+  width: 100%;
+  background-color: #ffffff; }
+  .assessDiv .assessTop {
+    border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+    background-color: #ffffff;
+    margin-top: 0.13675rem;
+    margin-left: 0.15385rem;
+    padding-top: 0.15385rem;
+    padding-bottom: 0.15385rem;
+    width: 2.89744rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(7, 17, 27, 0.1); }
+    .assessDiv .assessTop .assessTitle {
+      font-size: 0.11966rem;
+      font-weight: 2.99145rem;
+      line-height: 0.11966rem;
+      color: #07111b;
+      font-family: "Microsoft Yahei"; }
+    .assessDiv .assessTop .assessTab {
+      margin-top: 0.15385rem; }
+      .assessDiv .assessTop .assessTab .all {
+        width: 0.51282rem;
+        height: 0.2735rem; }
+        .assessDiv .assessTop .assessTab .all .allSpan {
+          width: 0.51282rem;
+          height: 0.2735rem;
+          font-size: 0.10256rem;
+          line-height: 0.2735rem;
+          border-radius: 0.00855rem;
+          background-color: #ffffff;
+          text-align: center;
+          margin-right: 0.06838rem; }
+        .assessDiv .assessTop .assessTab .all.selectSpanTab .allSpan {
+          color: #ffffff;
+          background-color: #00a0dc; }
+  .assessDiv .onlyLookAssessDiv {
+    width: 100%;
+    border-bottom: 1px solid rgba(7, 17, 27, 0.1); }
+    .assessDiv .onlyLookAssessDiv .onlyLookAssess {
+      margin-left: 0.15385rem;
+      padding-bottom: 0.10256rem;
+      padding-top: 0.10256rem; }
+      .assessDiv .onlyLookAssessDiv .onlyLookAssess .icon-check_circle {
+        font-size: 0.20513rem;
+        color: #93999f;
+        line-height: 0.20513rem; }
+        .assessDiv .onlyLookAssessDiv .onlyLookAssess .icon-check_circle.onlyCheck {
+          font-size: 0.20513rem;
+          color: #00a0dc;
+          line-height: 0.20513rem; }
+      .assessDiv .onlyLookAssessDiv .onlyLookAssess .onlyLookSpan {
+        padding-left: 0.03419rem;
+        font-size: 0.10256rem;
+        color: #93999f;
+        line-height: 0.20513rem; }
+  .assessDiv .assessDetailsDiv {
+    padding: 0.13675rem;
+    box-sizing: border-box;
+    width: 100%; }
+    .assessDiv .assessDetailsDiv .timeAndUser {
+      width: 100%; }
+      .assessDiv .assessDetailsDiv .timeAndUser .timeTd {
+        width: 45%;
+        font-size: 0.08547rem;
+        color: #93999f;
+        line-height: 0.20513rem; }
+      .assessDiv .assessDetailsDiv .timeAndUser .userIdTd {
+        width: 45%;
+        font-size: 0.08547rem;
+        color: #93999f;
+        line-height: 0.20513rem; }
+      .assessDiv .assessDetailsDiv .timeAndUser .userImgTd img {
+        width: 0.10256rem;
+        height: 0.10256rem; }
+    .assessDiv .assessDetailsDiv .thumbTr {
+      margin-top: 0.05128rem;
+      padding-bottom: 0.13675rem;
+      width: 100%;
+      border-bottom: 1px solid rgba(7, 17, 27, 0.1); }
+      .assessDiv .assessDetailsDiv .thumbTr .icon-thumb_down, .assessDiv .assessDetailsDiv .thumbTr .icon-thumb_up {
+        width: 0.09829rem;
+        font-size: 0.10256rem;
+        color: #00a0dc;
+        line-height: 0.20513rem; }
+      .assessDiv .assessDetailsDiv .thumbTr .assessContent {
+        padding-left: 0.03419rem;
+        font-size: 0.10256rem;
+        color: #07111b;
+        line-height: 0.20513rem; }
+
+.footerDiv {
+  height: 0.49573rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+  .footerDiv .footerBgTr {
+    width: 100%;
+    height: 0.44444rem;
+    background-color: #141d27;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    .footerDiv .footerBgTr .shopCarBgDivTd {
+      position: absolute;
+      bottom: 0.05983rem;
+      left: 0.10256rem;
+      width: 0.47863rem;
+      height: 0.47863rem;
+      background-color: #131d26;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%; }
+      .footerDiv .footerBgTr .shopCarBgDivTd .shipCarContain {
+        margin: 0.05128rem;
+        width: 0.37607rem;
+        height: 0.37607rem;
+        background-color: #2b343c;
+        border-radius: 50%; }
+        .footerDiv .footerBgTr .shopCarBgDivTd .shipCarContain .icon-shopping_cart {
+          text-align: center;
+          font-size: 0.20513rem;
+          color: #80858a;
+          line-height: 0.37607rem; }
+    .footerDiv .footerBgTr .totalPriceTd {
+      position: absolute;
+      height: 0.20513rem;
+      width: 0.8547rem;
+      bottom: 0.10256rem;
+      left: 0.68376rem;
+      font-size: 0.13675rem;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 2.99145rem;
+      line-height: 0.20513rem; }
+    .footerDiv .footerBgTr .sendFeeTd {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      position: absolute;
+      padding-left: 0.10256rem;
+      margin-left: 0.10256rem;
+      height: 0.20513rem;
+      width: 100%;
+      bottom: 0.10256rem;
+      left: 1.14957rem;
+      font-size: 0.08547rem;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 0.20513rem; }
+    .footerDiv .footerBgTr .sendInitPriceTd {
+      width: 0.89744rem;
+      height: 100%;
+      background-color: #2b333b;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+      .footerDiv .footerBgTr .sendInitPriceTd .sendInitPrice {
+        margin-left: 0.06838rem;
+        margin-top: 0.13675rem;
+        width: 0.76068rem;
+        height: 0.20513rem;
+        text-align: center;
+        font-size: 0.10256rem;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 2.99145rem;
+        line-height: 0.20513rem; }
