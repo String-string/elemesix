@@ -1540,7 +1540,7 @@
 
         container.onmousewheel = fn;
         if (container.addEventListener) container.addEventListener("DOMMouseScroll", fn, false);
-        if (container.addEventListener) container.addEventListener("touchmove", fn, false);
+    
         slider = document.createElement('span');
         slider.id = "slider";
         slider.style.height = container.offsetHeight * (container.offsetHeight / content.offsetHeight) + "px";
