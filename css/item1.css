@@ -78,23 +78,15 @@ html {
     .bgShadowDiv .gongGaoDiv .gongGaoTr {
       width: 100%;
       overflowX: hidden;
-      overflow-y: hidden; 
- 		margin-left: 0.10256rem;}
-      .bgShadowDiv .gongGaoDiv .gongGaoTr .img {
-      /*	width: rem(44);
-        height: rem(25);*/
+      overflow-y: hidden; }
+      .bgShadowDiv .gongGaoDiv .gongGaoTr img {
+      	width: rem(44);
+        height: rem(25);
         /*margin-top: 0.0641rem;
         margin-left: 0.10256rem;*/
         width: 0.18803rem;
         height: 0.10256rem; }
-        .bgShadowDiv .gongGaoDiv .gongGaoTr .img img {
-      	 width: 0.18803rem;
-        height: 0.10256rem; 
-       /* width: 0.18803rem;
-        height: 0.10256rem;*/
-		vertical-align:middle;
-         }
-
+        
       .bgShadowDiv .gongGaoDiv .gongGaoTr .gongGaoSpan {
         width: 100%;
         height: 0.23932rem;
