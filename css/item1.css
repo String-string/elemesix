@@ -81,15 +81,15 @@ html {
       overflow-y: hidden; 
  		margin-left: 0.10256rem;}
       .bgShadowDiv .gongGaoDiv .gongGaoTr .img {
-      	width: rem(44);
-        height: rem(25);
+      /*	width: rem(44);
+        height: rem(25);*/
         /*margin-top: 0.0641rem;
         margin-left: 0.10256rem;*/
         width: 0.18803rem;
         height: 0.10256rem; }
         .bgShadowDiv .gongGaoDiv .gongGaoTr .img img {
-      	width: rem(44);
-        height: rem(25);
+      	 width: 0.18803rem;
+        height: 0.10256rem; 
        /* width: 0.18803rem;
         height: 0.10256rem;*/
 		vertical-align:middle;
