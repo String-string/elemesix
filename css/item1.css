@@ -80,11 +80,12 @@ html {
       overflowX: hidden;
       overflow-y: hidden; 
       height: 0.23932rem;
-   		margin-left: 0.10256rem;}
+   		margin-left: 0.10256rem;
+   		margin-top: 0.07rem;}
       .bgShadowDiv .gongGaoDiv .gongGaoTr .img {
       	width: 0.18803rem;
         height:  0.10256rem;
-        /*margin-top: 0.0641rem;*/
+        
         img{
         	width: 0.18803rem;
         	height: 0.10256rem;
