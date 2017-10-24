@@ -82,11 +82,14 @@ html {
       height: 0.23932rem;
    		margin-left: 0.10256rem;}
       .bgShadowDiv .gongGaoDiv .gongGaoTr .img {
-      	/*width: rem(44);
-        height: rem(25);*/
+      	width: 0.18803rem;
+        height:  0.23932rem;
         /*margin-top: 0.0641rem;*/
-        width: 0.18803rem;
-        height: 0.10256rem; }
+        img{
+        	width: 0.18803rem;
+        height: 0.10256rem;
+        }
+         }
       .bgShadowDiv .gongGaoDiv .gongGaoTr .gongGaoSpan {
         width: 100%;
         height: 0.23932rem;
