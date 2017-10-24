@@ -76,7 +76,6 @@ html {
     left: 0;
     bottom: 0; }
     .bgShadowDiv .gongGaoDiv .gongGaoTr {
-      width: 100%;
       overflowX: hidden;
       overflow-y: hidden; 
       height: 0.23932rem;
