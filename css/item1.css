@@ -82,8 +82,8 @@ html {
       .bgShadowDiv .gongGaoDiv .gongGaoTr img {
       	width: rem(44);
         height: rem(25);
-        /*margin-top: 0.0641rem;
-        margin-left: 0.10256rem;*/
+        /*margin-top: 0.0641rem;*/
+        margin-left: 0.10256rem;
         width: 0.18803rem;
         height: 0.10256rem; }
         
