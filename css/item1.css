@@ -79,10 +79,10 @@ html {
       width: 100%;
       overflowX: hidden;
       overflow-y: hidden; 
-   margin-left: 0.10256rem;}
-      .bgShadowDiv .gongGaoDiv .gongGaoTr img {
-      	width: rem(44);
-        height: rem(25);
+   		margin-left: 0.10256rem;}
+      .bgShadowDiv .gongGaoDiv .gongGaoTr .img {
+      	/*width: rem(44);
+        height: rem(25);*/
         /*margin-top: 0.0641rem;*/
         width: 0.18803rem;
         height: 0.10256rem; }
