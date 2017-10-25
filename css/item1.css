@@ -76,17 +76,14 @@ html {
     left: 0;
     bottom: 0; }
     .bgShadowDiv .gongGaoDiv .gongGaoTr {
+      width: 100%;
       overflowX: hidden;
-      overflow-y: hidden; 
-      height: 0.23932rem;
-   		margin-left: 0.10256rem;
-   		}
-      .bgShadowDiv .gongGaoDiv .gongGaoTr .img {
-      	width: 0.18803rem;
-        height:  0.10256rem;
-        margin-top: 0.07rem;
-     
-         }
+      overflow-y: hidden; }
+      .bgShadowDiv .gongGaoDiv .gongGaoTr img {
+        margin-top: 0.0641rem;
+        margin-left: 0.10256rem;
+        width: 0.18803rem;
+        height: 0.10256rem; }
       .bgShadowDiv .gongGaoDiv .gongGaoTr .gongGaoSpan {
         width: 100%;
         height: 0.23932rem;
@@ -194,10 +191,9 @@ a {
 
 #outerWrap {
   width: 100%;
-  /*overflow-y: scroll;*/
-  overflow-x: hidden;
   position: relative;
-  height: 3.75214rem; }
+  height: 3.75214rem;
+  overflow-x: hidden; }
   #outerWrap .tabGroup {
     height: 3.2906rem;
     width: 0.68376rem;
@@ -899,15 +895,47 @@ a {
         font-size: 0.11966rem;
         color: #07111b;
         line-height: 0.11966rem; }
-      .shopChangeContentDiv .sceneContent .sceneDiv .imgDiv {
+      .shopChangeContentDiv .sceneContent .sceneDiv .banner {
+        margin: 0.10256rem auto 0;
+        position: relative;
+        overflow: hidden;
+        width: 3.20513rem;
         height: 0.76923rem; }
-        .shopChangeContentDiv .sceneContent .sceneDiv .imgDiv .img {
-          padding-right: 0.05128rem;
-          box-sizing: border-box; }
-          .shopChangeContentDiv .sceneContent .sceneDiv .imgDiv .img img {
-            margin-top: 0.10256rem;
-            width: 1.02564rem;
+        .shopChangeContentDiv .sceneContent .sceneDiv .banner .list {
+          width: 19.23077rem;
+          font-size: 0;
+          position: absolute;
+          left: 0; }
+          .shopChangeContentDiv .sceneContent .sceneDiv .banner .list img {
+            width: 1.60256rem;
             height: 0.76923rem; }
+@-webkit-keyframes banner {
+  0%,16% {
+    left: 0; }
+  17%,33% {
+    left: -1.65385rem; }
+  34%,49% {
+    left: -3.30769rem; }
+  50%,75% {
+    left: -4.96154rem; }
+  76%,91% {
+    left: -6.61538rem; } }
+        .shopChangeContentDiv .sceneContent .sceneDiv .banner .buttons {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+          .shopChangeContentDiv .sceneContent .sceneDiv .banner .buttons .focusButton {
+            margin: 3px;
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #000;
+            opacity: 0.8; }
+            .shopChangeContentDiv .sceneContent .sceneDiv .banner .buttons .focusButton.on {
+              background-color: orangered; }
   .shopChangeContentDiv .shopInfoDiv {
     padding-top: 0.13675rem;
     padding-left: 0.15385rem;
@@ -932,3 +960,5 @@ a {
       line-height: 0.13675rem;
       border-bottom: 1px solid #e6e7e8;
       padding-bottom: 0.10256rem; }
+
+/*# sourceMappingURL=item1.css.map */

@@ -1178,29 +1178,23 @@
     <div class="sceneContent">
         <div class="sceneDiv">
             <div class="sceneTitle">商家实景</div>
-            <div style="width: 100%;overflow-x: scroll">
-                <div class="imgDiv toTr">
-                    <div class="img toTd middle">
-                        <img src="images/p6/shangjiaimg.png" alt="">
-                    </div>
-                    <div class="img toTd middle">
-                        <img src="images/p6/shangjiaimg.png" alt="">
-                    </div>
-                    <div class="img toTd middle">
-                        <img src="images/p6/shangjiaimg.png" alt="">
-                    </div>
-                    <div class="img toTd middle">
-                        <img src="images/p6/shangjiaimg.png" alt="">
-                    </div>
-                    <div class="img toTd middle">
-                        <img src="images/p6/shangjiaimg.png" alt="">
-                    </div>
-                    <div class="img toTd middle">
-                        <img src="images/p6/shangjiaimg.png" alt="">
-                    </div>
+            <div class="banner">
+                <div class="list">
+                        <img src="images/p6/shangjiaimg.png" alt="">1
+                        <img src="images/p6/2.jpg" alt="">2
+                        <img src="images/p6/3.jpg" alt="">3
+                        <img src="images/p6/4.jpg" alt="">4
+                        <img src="images/p6/5.jpg" alt="">5
+                        <img src="images/p6/6.jpg" alt="">6
+                </div>
+                <div class="buttons">
+                    <div class="focusButton on" index="1"></div>
+                    <div class="focusButton" index="2"></div>
+                    <div class="focusButton" index="3"></div>
+                    <div class="focusButton" index="4"></div>
+                    <div class="focusButton" index="5"></div>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="shopInfoDiv">
@@ -1616,6 +1610,90 @@
 
     })();
 
+</script>
+<script>
+    $(function () {
+        var container = $('.banner');
+        var list = $('.list');
+        var slideimg=list.find("img")[0];
+        var buttons = $('.focusButton');
+//        var prev = $('#prev');
+//        var next = $('#next');
+        var index = 1;
+        var len = 5;
+        var interval = 3000;
+        var timer;
+        function animate (offset) {
+            var left = parseInt(list.css('left')) + offset;
+            if (offset>0) {
+                offset = '+=' + offset;
+            }
+            else {
+                offset = '-=' + Math.abs(offset);
+            }
+            list.animate({'left': offset}, 300, function () {
+                if(left=0){
+                    list.css('left', -slideimg.width * len);
+                }
+                if(left <(-slideimg.width*4)) {
+                    list.css('left', 0);
+                }
+            });
+        }
+        function showButton() {
+            buttons.eq(index-1).addClass('on').siblings().removeClass('on');//button on change
+        }
+        function play() {
+            timer = setTimeout(function () {
+//                next.trigger('click');
+                play();
+            }, interval);
+        }
+        function stop() {
+            clearTimeout(timer);
+        }
+//        next.bind('click', function () {
+//            if (list.is(':animated')) {
+//                return;
+//            }
+//            if (index == 5) {
+//                index = 1;
+//            }
+//            else {
+//                index += 1;
+//            }
+//            animate(-240);
+//            showButton();
+//        });
+//
+//        prev.bind('click', function () {
+//            if (list.is(':animated')) {
+//                return;
+//            }
+//            if (index == 1) {
+//                index = 5;
+//            }
+//            else {
+//                index -= 1;
+//            }
+//            animate(240);
+//            showButton();
+//        });
+        buttons.each(function () {
+            $(this).bind('click', function () {
+                if (list.is(':animated') || $(this).attr('class')=='on') {
+                    return;
+                }
+                var myIndex = parseInt($(this).attr('index'));
+                var offset = -slideimg.width* (myIndex-index);
+                animate(offset);
+                index = myIndex;
+                showButton();
+            })
+        });
+        container.hover(stop, play);
+        play();
+    });
 </script>
 </body>
 </html>

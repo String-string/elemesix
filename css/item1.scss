@@ -1121,17 +1121,58 @@ a {
         color: rgb(7,17,27);
         line-height: rem(28);
       }
-      .imgDiv{
-        height: rem(180);
-        .img{
-          padding-right: rem(12);
-          box-sizing: border-box;
+      .banner {
+        margin:rem(24) auto 0;
+        position:relative;
+        overflow:hidden;
+        width:rem(750);
+        height:rem(180);
+        .list {
+          width:rem(4500);
+          font-size:0;
+          position:absolute;
+          left:0;
+          //-webkit-animation:banner 15s infinite;
           img{
-            margin-top: rem(24);
-            width: rem(240);
+            width: rem(375);
             height: rem(180);
           }
+        }
+        @-webkit-keyframes banner {
+          0%,16% {
+            left:0;
+          }
+          17%,33% {
+            left:rem(-387);
+          }
+          34%,49% {
+            left:rem(-774);
+          }
+          50%,75% {
+            left:rem(-1161);
+          }
+          76%,91% {
+            left:rem(-1548);
+          }
 
+        }
+
+        .buttons{
+          position:absolute;
+          bottom:10px;
+          left:50%;
+          -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
+          .focusButton{
+            margin:3px;
+            float:left;
+            width:20px;
+            height:20px;
+            border-radius:10px;
+            background-color:#000;
+            opacity: 0.8;
+            &.on {  background-color: orangered;}
+          }
         }
       }
 
