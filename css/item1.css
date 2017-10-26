@@ -79,6 +79,24 @@ html {
       width: 100%;
       overflowX: hidden;
       overflow-y: hidden; 
+     
+     
+    }
+      .bgShadowDiv .gongGaoDiv .gongGaoTr img {
+        margin-top: 0.0641rem;
+        margin-left: 0.10256rem;
+        width: 0.18803rem;
+        height: 0.10256rem;
+         animation: swing 1s infinite; }
+      .bgShadowDiv .gongGaoDiv .gongGaoTr .gongGaoSpan {
+        width: 100%;
+        height: 0.23932rem;
+        font-size: 0.08547rem;
+        color: #ffffff;
+        font-weight: 0.8547rem;
+        padding-left: 0.03419rem;
+        line-height: 0.23932rem; 
+      animation: flash 0.000001s infinite;}
       @keyframes swing {
         20% {
           transform: rotate3d(0, 0, 1, 10deg);
@@ -100,7 +118,7 @@ html {
           transform: rotate3d(0, 0, 1, 0deg);
         }
       }
-       @-webkit-keyframes swing {
+      @-webkit-keyframes swing {
         20% {
           transform: rotate3d(0, 0, 1, 10deg);
         }
@@ -167,22 +185,6 @@ html {
           text-decoration: blink;
         }
       }
-    }
-      .bgShadowDiv .gongGaoDiv .gongGaoTr img {
-        margin-top: 0.0641rem;
-        margin-left: 0.10256rem;
-        width: 0.18803rem;
-        height: 0.10256rem;
-         animation: swing 1s infinite; }
-      .bgShadowDiv .gongGaoDiv .gongGaoTr .gongGaoSpan {
-        width: 100%;
-        height: 0.23932rem;
-        font-size: 0.08547rem;
-        color: #ffffff;
-        font-weight: 0.8547rem;
-        padding-left: 0.03419rem;
-        line-height: 0.23932rem; 
-      animation: flash 0.000001s infinite;}
   .bgShadowDiv .numDiv {
     width: 0.36752rem;
     height: 0.20513rem;
