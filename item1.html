@@ -1180,20 +1180,24 @@
             <div class="sceneTitle">商家实景</div>
             <div class="banner">
                 <div class="list">
+                        <img src="images/p6/6.jpg" alt="">6
                         <img src="images/p6/1.png" alt="">1
                         <img src="images/p6/2.jpg" alt="">2
                         <img src="images/p6/3.jpg" alt="">3
                         <img src="images/p6/4.jpg" alt="">4
                         <img src="images/p6/5.jpg" alt="">5
                         <img src="images/p6/6.jpg" alt="">6
+                        <img src="images/p6/1.png" alt="">1
+
                 </div>
                 <div class="buttons">
-                    <div class="focusButton on" index="1"></div>
+                    <div class="focusButton on" index="0"></div>
+                    <div class="focusButton" index="1"></div>
                     <div class="focusButton" index="2"></div>
-                    <div class="focusButton" index="3"></div>
-                    <div class="focusButton" index="4"></div>
-                    <div class="focusButton" index="5"></div>
+                   
                 </div>
+                <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+                <a href="javascript:;" id="next" class="arrow">&gt;</a>
             </div>
         </div>
     </div>
@@ -1611,7 +1615,7 @@
     })();
 
 </script>
-<script>
+<!-- <script>
     $(function () {
         var container = $('.banner');
         var list = $('.list');
@@ -1694,6 +1698,92 @@
         container.hover(stop, play);
         play();
     });
+</script> -->
+
+<script type="text/javascript">
+    var list = $('.list');
+    var slideimg=list.find("img")[0];
+    var pic_length=375;
+    var currentIndex=0;
+    var hasStarted=false;
+    var timer;
+    $(function(){
+        startPlay();//开始轮播
+        //点击左箭头
+        $('#prev').on("click",function(){
+            console.log(parseInt(list.css("left"))+pic_length);
+            if (!hasStarted) {
+                animate(pic_length);
+                --currentIindex;
+                if (currentIindex<0) {
+                    currentIindex=4;
+                }
+                showDot();
+            }
+
+        });
+
+        $("#next").on("click",function(){
+            if (!hasStarted) {
+                ++currentIndex;
+                if(currentIndex>4){
+                    currentIndex=0;
+                }
+                showDot();
+                console.log(parseInt(list.css('left'))-pic_length);
+                animate(-pic_length);
+            }
+        });
+        $(".container").hover(function(){
+            stopPlay();
+        },function(){
+            startPlay();
+        });
+
+    })
+
+    function startPlay(){
+        timer = setInterval(function() {
+            $('#next').click(); //相当于点击next
+        }, 2000);//每间隔2秒轮播
+    }
+    function stopPlay(){
+        clearInterval(timer);
+    }
+
+    function animate(offset){
+        hasStarted=true;
+        var newLeft=parseInt(list.css('left'))+offset;
+        var time=300;
+        var interval=100;
+        var speed=offset/(time/interval);
+        move();
+        function move(){
+            if((speed < 0 && parseInt(list.css('left')) > newLeft) || (speed > 0 && parseInt(list.css('left')) < newLeft)) {
+                list.css('left', parseInt(list.css('left')) + speed + 'px');//左移 or 右移一个speed宽度
+
+                //setTimeout是在设置的时间后执行，只执行一次，而setInterval是每隔一段时间就执行一次
+                setTimeout(move, interval);
+
+            } else { //移动到位了，需要正确设定位置
+                hasStarted = false;//位移结束了,将轮播标志位置为false
+                list.css('left', newLeft + 'px');//左移 or 右移一张图的宽度
+
+                //判断是否是左一/右一‘假’的图片，并重置
+                if(newLeft > -pic_length) {
+                    list.css('left', -(pic_length * 3) + 'px');
+                }
+                if(newLeft < -(pic_length * 3)) {
+                    list.css('left', -pic_length  + 'px');
+                }
+            }
+        }
+    }
+    function showDot() { //下标选择状态
+        //console.log(currentIndex);
+        $('.focusButton').removeClass('on');//清除所有激活样式
+        $('.focusButton').eq(currentIndex).addClass('on');//设置当前index激活样式
+    }
 </script>
 </body>
 </html>
