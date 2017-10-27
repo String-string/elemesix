@@ -1615,15 +1615,15 @@
     })();
 
 </script>
-<!-- <script>
+<script>
     $(function () {
         var container = $('.banner');
         var list = $('.list');
         var slideimg=list.find("img")[0];
         var buttons = $('.focusButton');
-//        var prev = $('#prev');
-//        var next = $('#next');
-        var index = 1;
+       var prev = $('#prev');
+       var next = $('#next');
+        var index = 0;
         var len = 5;
         var interval = 3000;
         var timer;
@@ -1636,11 +1636,11 @@
                 offset = '-=' + Math.abs(offset);
             }
             list.animate({'left': offset}, 300, function () {
-                if(left=0){
-                    list.css('left', -slideimg.width * len);
+                if(left>0){
+                    list.css('left', -slideimg.width * 4);
                 }
                 if(left <(-slideimg.width*4)) {
-                    list.css('left', 0);
+                    list.css('left', -slideimg.width);
                 }
             });
         }
@@ -1656,33 +1656,33 @@
         function stop() {
             clearTimeout(timer);
         }
-//        next.bind('click', function () {
-//            if (list.is(':animated')) {
-//                return;
-//            }
-//            if (index == 5) {
-//                index = 1;
-//            }
-//            else {
-//                index += 1;
-//            }
-//            animate(-240);
-//            showButton();
-//        });
-//
-//        prev.bind('click', function () {
-//            if (list.is(':animated')) {
-//                return;
-//            }
-//            if (index == 1) {
-//                index = 5;
-//            }
-//            else {
-//                index -= 1;
-//            }
-//            animate(240);
-//            showButton();
-//        });
+       next.bind('click', function () {
+           if (list.is(':animated')) {
+               return;
+           }
+           if (index == 5) {
+               index = 1;
+           }
+           else {
+               index += 1;
+           }
+           animate(-375);
+           showButton();
+       });
+
+       prev.bind('click', function () {
+           if (list.is(':animated')) {
+               return;
+           }
+           if (index == 1) {
+               index = 5;
+           }
+           else {
+               index -= 1;
+           }
+           animate(375);
+           showButton();
+       });
         buttons.each(function () {
             $(this).bind('click', function () {
                 if (list.is(':animated') || $(this).attr('class')=='on') {
@@ -1698,9 +1698,9 @@
         container.hover(stop, play);
         play();
     });
-</script> -->
+</script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var list = $('.list');
     var slideimg=list.find("img")[0];
     var pic_length=slideimg.width;
@@ -1784,6 +1784,6 @@
         $('.focusButton').removeClass('on');//清除所有激活样式
         $('.focusButton').eq(currentIndex).addClass('on');//设置当前index激活样式
     }
-</script>
+</script> -->
 </body>
 </html>
