@@ -1621,8 +1621,8 @@
         var list = $('.list');
         var slideimg=list.find("img")[0];
         var buttons = $('.focusButton');
-       var prev = $('#prev');
-       var next = $('#next');
+        var prev = $('#prev');
+        var next = $('#next');
         var index = 0;
         var len = 5;
         var interval = 3000;
@@ -1648,41 +1648,41 @@
             buttons.eq(index-1).addClass('on').siblings().removeClass('on');//button on change
         }
         function play() {
-            timer = setTimeout(function () {
-//                next.trigger('click');
+            timer = setInterval(function () {
+                next.trigger('click');
                 play();
             }, interval);
         }
         function stop() {
             clearTimeout(timer);
         }
-       next.bind('click', function () {
-           if (list.is(':animated')) {
-               return;
-           }
-           if (index == 5) {
-               index = 1;
-           }
-           else {
-               index += 1;
-           }
-           animate(-375);
-           showButton();
-       });
+        next.bind('click', function () {
+            if (list.is(':animated')) {
+                return;
+            }
+            if (index == 2) {
+                index = 0;
+            }
+            else {
+                index += 1;
+            }
+            animate(-375);
+            showButton();
+        });
 
-       prev.bind('click', function () {
-           if (list.is(':animated')) {
-               return;
-           }
-           if (index == 1) {
-               index = 5;
-           }
-           else {
-               index -= 1;
-           }
-           animate(375);
-           showButton();
-       });
+        prev.bind('click', function () {
+            if (list.is(':animated')) {
+                return;
+            }
+            if (index == 0) {
+                index = 2;
+            }
+            else {
+                index -= 1;
+            }
+            animate(375);
+            showButton();
+        });
         buttons.each(function () {
             $(this).bind('click', function () {
                 if (list.is(':animated') || $(this).attr('class')=='on') {
