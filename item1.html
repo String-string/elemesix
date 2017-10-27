@@ -1179,7 +1179,7 @@
         <div class="sceneDiv">
             <div class="sceneTitle">商家实景</div>
             <div class="banner">
-                <div class="list">
+                <div class="list" style="left: -375px;">
                         <img src="images/p6/6.jpg" alt="">6
                         <img src="images/p6/1.png" alt="">1
                         <img src="images/p6/2.jpg" alt="">2
@@ -1196,8 +1196,8 @@
                     <div class="focusButton" index="2"></div>
                    
                 </div>
-                <a href="javascript:;" id="prev" class="arrow">&lt;</a>
-                <a href="javascript:;" id="next" class="arrow">&gt;</a>
+                <a href="javascript:;" id="prev" class="arrow"><img src="images/p6/iconback.png" alt=""></a>
+                <a href="javascript:;" id="next" class="arrow"><img src="images/p6/iconright.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -1703,7 +1703,7 @@
 <script type="text/javascript">
     var list = $('.list');
     var slideimg=list.find("img")[0];
-    var pic_length=375;
+    var pic_length=slideimg.width;
     var currentIndex=0;
     var hasStarted=false;
     var timer;
@@ -1715,8 +1715,8 @@
             if (!hasStarted) {
                 animate(pic_length);
                 --currentIindex;
-                if (currentIindex<0) {
-                    currentIindex=4;
+                if (currentIindex<=0) {
+                    currentIindex++;
                 }
                 showDot();
             }
@@ -1726,7 +1726,7 @@
         $("#next").on("click",function(){
             if (!hasStarted) {
                 ++currentIndex;
-                if(currentIndex>4){
+                if(currentIndex>=3){
                     currentIndex=0;
                 }
                 showDot();

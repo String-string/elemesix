@@ -972,14 +972,24 @@ a {
           left: 50%;
           -webkit-transform: translateX(-50%);
           transform: translateX(-50%); }
-          .shopChangeContentDiv .sceneContent .sceneDiv .banner #prev,#next{
-             position: absolute; left: rem(20);
-            top:50%;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            width: rem(40);
-            height: rem(40);
-          }
+       .shopChangeContentDiv .sceneContent .sceneDiv .banner #prev {
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%); }
+          .shopChangeContentDiv .sceneContent .sceneDiv .banner #prev img {
+            width:13px;
+            height: 14px; }
+        .shopChangeContentDiv .sceneContent .sceneDiv .banner #next {
+          position: absolute;
+          right:  20px;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%); }
+          .shopChangeContentDiv .sceneContent .sceneDiv .banner #next img {
+             width:13px;
+            height: 14px;  }
           .shopChangeContentDiv .sceneContent .sceneDiv .banner .buttons .focusButton {
             margin: 3px;
             float: left;
