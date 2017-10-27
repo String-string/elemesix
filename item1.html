@@ -1474,6 +1474,7 @@
 
 </script>
 <script>
+
     var container = document.getElementById('container');
     var content = document.getElementById('content');
     var oDivs = DOM.children(content, "div");
@@ -1485,9 +1486,6 @@
     var flag = 0;
     var upFlag = oLis.length;
 
-
-
-
     (function () {
         function fn(e) {
             e = e || window.event;
@@ -1495,7 +1493,7 @@
                 var n = e.wheelDelta;
             } else if (e.detail) {
                 var n = e.detail * -1;
-            }	//e.wheelDelta是判断是否为非firefox浏览器，e.detail为firefox浏览器
+            }   //e.wheelDelta是判断是否为非firefox浏览器，e.detail为firefox浏览器
             if (n > 0) {
                 container.scrollTop -= 12;
             } else if (n < 0) {
@@ -1543,7 +1541,6 @@
 
         container.onmousewheel = fn;
         if (container.addEventListener) container.addEventListener("DOMMouseScroll", fn, false);
-    
         slider = document.createElement('span');
         slider.id = "slider";
         slider.style.height = container.offsetHeight * (container.offsetHeight / content.offsetHeight) + "px";
@@ -1614,6 +1611,18 @@
 
     })();
 
+    (function () {
+        var focusBtn = DOM.getElesByClass("focusButton");
+        function changdeFocus() {
+            var index=DOM.getIndex(this);
+            for(var i=0;i<focusBtn.length;i++){
+                DOM.removeClass(focusBtn[i],"focus");
+            }
+            DOM.addClass(this, "focus");
+        }
+        for (var i = 0; i < focusBtn.length; i++) {
+            focusBtn[i].onclick= changdeFocus;}
+    })()
 </script>
 <script>
     $(function () {
